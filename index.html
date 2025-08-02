@@ -1,0 +1,456 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Maple Wick Café</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+      @keyframes fadeIn {
+        0% {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .fade-in {
+        opacity: 0;
+        animation: fadeIn 0.8s ease-out forwards;
+      }
+      .fade-in-delay-1 {
+        animation-delay: 0.2s;
+      }
+      .fade-in-delay-2 {
+        animation-delay: 0.4s;
+      }
+      .fade-in-delay-3 {
+        animation-delay: 0.6s;
+      }
+    </style>
+  </head>
+
+  <body class="bg-white text-gray-800 font-sans antialiased">
+    <!-- Navbar -->
+    <header
+      class="fixed top-0 inset-x-0 z-50 backdrop-blur bg-white/70 border-b border-gray-200"
+    >
+      <div
+        class="max-w-7xl flex h-16 mr-auto ml-auto pr-6 pl-6 items-center justify-between"
+      >
+        <a href="#" class="text-lg font-semibold tracking-tight"
+          >Maple Wick Café</a
+        >
+        <nav class="hidden md:flex gap-8 text-sm font-medium">
+          <a href="#menu" class="hover:text-gray-900 transition">Menu</a>
+          <a href="#about" class="hover:text-gray-900 transition">About</a>
+          <a href="#location" class="hover:text-gray-900 transition"
+            >Location</a
+          >
+        </nav>
+      </div>
+    </header>
+
+    <!-- Hero -->
+    <section id="hero" class="relative pt-24">
+      <img
+        src="hero.avif"
+        alt="Café interior"
+        class="absolute inset-0 w-full h-full object-cover brightness-75"
+      />
+      <div class="relative max-w-7xl mx-auto px-6 py-32 text-center text-white">
+        <h1 class="md:text-6xl fade-in text-5xl font-semibold tracking-tight">
+          Morning starts with a perfect brew
+        </h1>
+        <p class="mt-6 text-lg fade-in fade-in-delay-1">
+          Freshly roasted coffee and handcrafted pastries in the heart of the
+          city.
+        </p>
+        <div class="mt-8 flex justify-center gap-4 fade-in fade-in-delay-2">
+          <a
+            href="#menu"
+            class="px-6 py-3 bg-white text-gray-900 rounded-md shadow hover:shadow-lg transition"
+            >View Menu</a
+          >
+          <a
+            href="#location"
+            class="px-6 py-3 border border-white text-white rounded-md hover:bg-white/10"
+            >Find Us</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- Menu -->
+    <section id="menu" class="max-w-7xl mx-auto px-6 py-24">
+      <h2 class="text-3xl md:text-4xl font-semibold tracking-tight fade-in">
+        Our Menu
+      </h2>
+      <p class="mt-4 text-gray-600 fade-in fade-in-delay-1">
+        Crafted with passion, served with love.
+      </p>
+
+      <div class="mt-12 grid md:grid-cols-2 gap-12 fade-in fade-in-delay-2">
+        <!-- Coffee -->
+        <div class="">
+          <h3
+            class="text-2xl font-medium tracking-tight flex items-center gap-2"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              data-lucide="coffee"
+              class="lucide lucide-coffee w-5 h-5"
+            >
+              <path d="M10 2v2"></path>
+              <path d="M14 2v2"></path>
+              <path
+                d="M16 8a1 1 0 0 1 1 1v8a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V9a1 1 0 0 1 1-1h14a4 4 0 1 1 0 8h-1"
+              ></path>
+              <path d="M6 2v2"></path>
+            </svg>
+            Coffee
+          </h3>
+          <ul class="mt-6 divide-y divide-gray-200">
+            <li class="py-4 flex justify-between">
+              <div>
+                <p class="font-medium">Espresso</p>
+                <p class="text-sm text-gray-500">
+                  Rich &amp; intense single shot
+                </p>
+              </div>
+              <span class="font-medium text-gray-700">$3.00</span>
+            </li>
+            <li class="py-4 flex justify-between">
+              <div>
+                <p class="font-medium">Cappuccino</p>
+                <p class="text-sm text-gray-500">
+                  Velvety foam &amp; double shot
+                </p>
+              </div>
+              <span class="font-medium text-gray-700">$4.00</span>
+            </li>
+            <li class="py-4 flex justify-between">
+              <div>
+                <p class="font-medium">Latte</p>
+                <p class="text-sm text-gray-500">
+                  Creamy steamed milk &amp; espresso
+                </p>
+              </div>
+              <span class="font-medium text-gray-700">$4.50</span>
+            </li>
+            <li class="py-4 flex justify-between">
+              <div>
+                <p class="font-medium">Cold Brew</p>
+                <p class="text-sm text-gray-500">
+                  Slow-steeped &amp; refreshing
+                </p>
+              </div>
+              <span class="font-medium text-gray-700">$4.25</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Pastries -->
+        <div class="">
+          <h3
+            class="text-2xl font-medium tracking-tight flex items-center gap-2"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              data-lucide="cake"
+              class="lucide lucide-cake w-5 h-5"
+            >
+              <path d="M20 21v-8a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8"></path>
+              <path
+                d="M4 16s.5-1 2-1 2.5 2 4 2 2.5-2 4-2 2.5 2 4 2 2-1 2-1"
+              ></path>
+              <path d="M2 21h20"></path>
+              <path d="M7 8v3"></path>
+              <path d="M12 8v3"></path>
+              <path d="M17 8v3"></path>
+              <path d="M7 4h.01"></path>
+              <path d="M12 4h.01"></path>
+              <path d="M17 4h.01"></path>
+            </svg>
+            Pastries
+          </h3>
+          <ul class="mt-6 divide-y divide-gray-200">
+            <li class="py-4 flex justify-between">
+              <div>
+                <p class="font-medium">Croissant</p>
+                <p class="text-sm text-gray-500">Flaky &amp; buttery</p>
+              </div>
+              <span class="font-medium text-gray-700">$3.50</span>
+            </li>
+            <li class="py-4 flex justify-between">
+              <div>
+                <p class="font-medium">Blueberry Muffin</p>
+                <p class="text-sm text-gray-500">Bursting with berries</p>
+              </div>
+              <span class="font-medium text-gray-700">$3.25</span>
+            </li>
+            <li class="py-4 flex justify-between">
+              <div>
+                <p class="font-medium">Chocolate Chip Cookie</p>
+                <p class="text-sm text-gray-500">Soft &amp; gooey chips</p>
+              </div>
+              <span class="font-medium text-gray-700">$2.75</span>
+            </li>
+            <li class="py-4 flex justify-between">
+              <div class="">
+                <p class="font-medium">Banana Bread</p>
+                <p class="text-sm text-gray-500">Moist &amp; nutty slice</p>
+              </div>
+              <span class="font-medium text-gray-700">$3.00</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Favorites Chart -->
+
+    <!-- About -->
+    <section id="about" class="max-w-7xl mx-auto px-6 py-24">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <img
+          src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&amp;fit=crop&amp;w=1420&amp;q=80"
+          alt="Barista pouring coffee"
+          class="rounded-lg shadow-lg object-cover w-full h-80 md:h-full"
+        />
+        <div class="">
+          <h2 class="text-3xl md:text-4xl font-semibold tracking-tight">
+            Our Story
+          </h2>
+          <p class="leading-relaxed text-gray-600 mt-6">
+            Since 2025, Maple Wick Café has been a community hub for coffee
+            lovers and pastry enthusiasts alike. We source organic beans from
+            sustainable farms, roast in-house, and bake fresh every morning.
+            Step inside and feel at home.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Location -->
+    <section
+      id="location"
+      class="max-w-7xl mr-auto ml-auto pt-24 pr-6 pb-24 pl-6"
+    >
+      <h2 class="md:text-4xl text-3xl font-semibold tracking-tight">
+        Visit Us
+      </h2>
+      <p class="mt-4 text-gray-600">4710 Langston Blvd., Arlington, VA 22207</p>
+
+      <div class="mt-8 grid md:grid-cols-2 gap-12">
+        <iframe
+          src="https://maps.google.com/maps?q=4710 Langston Blvd., Arlington, VA 22207&t=&z=15&ie=UTF8&iwloc=&output=embed"
+          class="w-full h-80 rounded-lg border border-gray-200"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          allowfullscreen
+        ></iframe>
+
+        <div class="space-y-4">
+          <div class="flex items-center gap-3">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              data-lucide="clock"
+              class="lucide lucide-clock w-5 h-5 text-gray-700"
+            >
+              <path d="M12 6v6l4 2"></path>
+              <circle cx="12" cy="12" r="10"></circle>
+            </svg>
+            <p class="text-gray-700">
+              <span class="font-medium">Mon–Fri:</span>7:00 am – 7:00 pm
+            </p>
+          </div>
+          <div class="flex items-center gap-3">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              data-lucide="clock"
+              class="lucide lucide-clock w-5 h-5 text-gray-700"
+            >
+              <path d="M12 6v6l4 2"></path>
+              <circle cx="12" cy="12" r="10"></circle>
+            </svg>
+            <p class="text-gray-700">
+              <span class="font-medium">Sat–Sun:</span> 8:00 am – 6:00 pm
+            </p>
+          </div>
+          <div class="flex items-center gap-3">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              data-lucide="phone"
+              class="lucide lucide-phone w-5 h-5 text-gray-700"
+            >
+              <path
+                d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"
+              ></path>
+            </svg>
+            <p class="text-gray-700">(202) 509-3030</p>
+          </div>
+          <div class="flex items-center gap-3">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              data-lucide="mail"
+              class="lucide lucide-mail w-5 h-5 text-gray-700"
+            >
+              <path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7" class=""></path>
+              <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-gray-200">
+      <div
+        class="max-w-7xl flex flex-col md:flex-row mr-auto ml-auto pt-8 pr-6 pb-8 pl-6 items-center justify-between"
+      >
+        <p class="text-sm text-gray-600">
+          © <span id="year">2025</span> Maple Wick Café. All rights reserved.
+        </p>
+        <div class="flex gap-6 md:mt-0 mt-4">
+          <a
+            href="#"
+            aria-label="Instagram"
+            class="hover:text-gray-900 transition"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              data-lucide="instagram"
+              class="lucide lucide-instagram w-[20px] h-[20px]"
+              style="width: 20px; height: 20px; color: rgb(17, 24, 39)"
+            >
+              <rect
+                width="20"
+                height="20"
+                x="2"
+                y="2"
+                rx="5"
+                ry="5"
+                class=""
+              ></rect>
+              <path
+                d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"
+                class=""
+              ></path>
+              <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
+            </svg>
+          </a>
+          <a
+            href="#"
+            aria-label="Twitter"
+            class="hover:text-gray-900 transition"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              data-lucide="twitter"
+              class="lucide lucide-twitter w-[20px] h-[20px]"
+              style="width: 20px; height: 20px; color: rgb(17, 24, 39)"
+            >
+              <path
+                d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"
+                class=""
+              ></path>
+            </svg>
+          </a>
+          <a
+            href="#"
+            aria-label="Facebook"
+            class="hover:text-gray-900 transition"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              data-lucide="facebook"
+              class="lucide lucide-facebook w-5 h-5"
+            >
+              <path
+                d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"
+                class=""
+              ></path>
+            </svg>
+          </a>
+        </div>
+        <a href="#" aria-label="TikTok" class="hover:text-gray-900 transition">
+        </a>
+      </div>
+    </footer>
+  </body>
+</html>
